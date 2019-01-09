@@ -2,7 +2,7 @@
 
 This is a repository containing code and data for the paper:
 
-> B. Tabibian, U. Upadhyay, A. De, A. Zarezade, Bernhard Schölkopf, and M. Gomez-Rodriguez. Optimizing Human Learning via Spaced Repetition Optimization. To appear at the Proceedings of the National Academy of Sciences (PNAS), 2019.
+> B. Tabibian, U. Upadhyay, A. De, A. Zarezade, Bernhard Schölkopf, and M. Gomez-Rodriguez. Enhancing Human Learning via Spaced Repetition Optimization. To appear at the Proceedings of the National Academy of Sciences (PNAS), 2019.
 
 An in a nutshell description of our algorithm is available in this
 supporting website: [http://learning.mpi-sws.org/memorize/](http://learning.mpi-sws.org/memorize/).
