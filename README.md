@@ -13,8 +13,8 @@ This code depends on the following packages:
 
 ## Code structure
 
- - `memorize.py` contains the algorithm to obtain samples from optimal reviewing intensity.
- - `preprocesed_weights.csv` contains weights for [HLR model](https://github.com/duolingo/halflife-regression) as described in section 8 of supplementary materials.
+ - `memorize.py` contains the memorize algorithm.
+ - `preprocesed_weights.csv` contains estimated model parameters for the [HLR model](https://github.com/duolingo/halflife-regression), as described in section 8 of supplementary materials.
  - `observations_1k.csv` contains a set of 1K user-item pairs and associated number of total/correct attempts by every user for given items. This dataset has been curated from a larger dataset released by Duolingo, available [here](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/N8XJME).
 
  ## Execution
