@@ -1,16 +1,13 @@
-"""This file contains functions which are used to generate the log-likelihood for
-different memory models and other code required to run the experiments in the
-manuscript."""
+"""This file contains functions which are used to generate the log-likelihood
+for different memory models and other code required to run the experiments in
+the manuscript."""
 
-import bisect
-import heapq
 import multiprocessing as MP
 import warnings
-from collections import OrderedDict, defaultdict
+from collections import defaultdict
 
 import numpy as np
 import pandas as pd
-from scipy.stats import kendalltau, ks_2samp, spearmanr
 
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
@@ -70,7 +67,7 @@ def max_memorize(n_0, a, b, recalled, Ds,
             if MODEL_POWER is False:
                 m_dt = np.exp(-n_t * D)
             else:
-                m_dt = (1 + POWER_B*D)**(-n_t)
+                m_dt = (1 + POWER_B * D)**(-n_t)
 
             n_ts.append(n_t)
             m_dts.append(m_dt)
