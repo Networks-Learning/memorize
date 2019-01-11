@@ -20,10 +20,25 @@ This code depends on the following packages:
  - `preprocesed_weights.csv` contains estimated model parameters for the [HLR model](https://github.com/duolingo/halflife-regression), as described in section 8 of supplementary materials.
  - `observations_1k.csv` contains a set of 1K user-item pairs and associated number of total/correct attempts by every user for given items. This dataset has been curated from a larger dataset released by Duolingo, available [here](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/N8XJME).
 
- ## Execution
+## Execution
 
- The code can by executed as follows:
+The code can by executed as follows:
 
- `python memorize.py`
+`python memorize.py`
 
- The code will use default parameter value (q) used in the code.
+The code will use default parameter value (q) used in the code.
+
+----
+
+# Experiments with Duolingo data
+
+## Pre-processing
+
+Convert to Python `dict` by `user_id, lexeme_id` and pruning it for reading it:
+
+    python dataset2dict.py ./data/raw/duolingo.csv ./data/duo_dict.dill --success_prob 0.99 --max_days 30 
+    python process_raw_data.py ./data/raw/duolingo.csv ./data/duolingo_reduced.csv
+
+## Plots
+
+See the notebook `plots.ipynb`.
