@@ -11,8 +11,13 @@ supporting website: [http://learning.mpi-sws.org/memorize/](http://learning.mpi-
 
 This code depends on the following packages:
 
- 1. `numpy`: Installation instructions are at [http://www.numpy.org/](http://www.numpy.org/) or `pip install numpy`.
- 2. `pandas`: Installation instructions are at [https://pandas.pydata.org/](https://pandas.pydata.org/) or `pip install pandas`.
+ 1. `numpy`
+ 2. `pandas`
+ 3. `matplotlib`
+ 4. `seaborn`
+ 5. `scipy`
+ 6. `dill`
+ 7. `click`
 
 ## Code structure
 
