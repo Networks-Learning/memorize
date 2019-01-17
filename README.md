@@ -18,6 +18,8 @@ This code depends on the following packages:
  5. `scipy`
  6. `dill`
  7. `click`
+ 
+Apart from this, the instructions assume that the [Duolingo dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/N8XJME) has been downloaded, extracted, and saved at `./data/raw/duolingo.csv`.
 
 ## Code structure
 
