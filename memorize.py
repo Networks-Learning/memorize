@@ -7,7 +7,7 @@
 import numpy as np
 import pandas as pd
 
-q = 0.1  # parameter q defined in eq. 8 in the paper.
+Q = 1.0  # parameter q defined in eq. 8 in the paper.
 T = 10.0  # number of days in the future to generate reviewing timeself.
 
 
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     hlr = results_hlr[3:].reset_index().set_index('lexeme_id')
     i = 0
     print("Generating reviewing times for user-item pairs")
-    print("Maximum duration: {}, q: {}".format(T, q))
+    print("Maximum duration: {}, q: {}".format(T, Q))
     with open("observation_1k.csv") as f:
         f.readline()
         output_file.write(", ".join(("user-id", "lexeme_id", "review time (in days)\n")))
@@ -56,7 +56,7 @@ if __name__ == '__main__':
             n_t = hlr['value'].loc[lid] *\
                             2**(-(right*n_correct+\
                                   wrong*n_wrong))
-            t_rev = sampler(n_t, 1.0, 10.0)
+            t_rev = sampler(n_t, Q, T)
             output_file.write(", ".join((values[1], values[2], str(t_rev) if t_rev is not None else ""))+"\n")
             if i%100 == 0:
                 print("Finished processing {} lines.".format(i))
